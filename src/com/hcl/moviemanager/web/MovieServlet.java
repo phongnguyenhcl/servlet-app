@@ -13,18 +13,18 @@ import com.hcl.moviemanager.model.Movie;
 import com.hcl.moviemanager.dao.MovieDAO;
 
 @WebServlet("/show")
-public class MovieServlet extends HttpServlet{
+public class MovieServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private MovieDAO movieDAO;
-	
+
 	public void init() {
 		movieDAO = new MovieDAO();
 	}
-	
+
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doGet(req, resp);
 	}
-	
+
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		PrintWriter out = resp.getWriter();
 		showUser(req, resp);
@@ -40,7 +40,5 @@ public class MovieServlet extends HttpServlet{
 		} else {
 			out.println(movie);
 		}
-		
 	}
-
 }

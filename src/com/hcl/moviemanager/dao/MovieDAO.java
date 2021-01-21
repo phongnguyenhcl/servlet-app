@@ -15,7 +15,6 @@ public class MovieDAO {
 
 	private static final String SELECT_MOVIE_BY_ID = "select movie_id, movie_title, movie_rating, movie_year from movies where movie_id=?";
 
-	
 	protected Connection getConnection() {
 		Connection connection = null;
 		try {
@@ -52,5 +51,4 @@ public class MovieDAO {
 		}
 		return movie;
 	}
-
 }

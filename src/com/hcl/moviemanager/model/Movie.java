@@ -6,7 +6,7 @@ public class Movie {
 	protected String name;
 	protected double rating;
 	protected int year;
-	
+
 	public Movie(int id, String name, double rating, int year) {
 		super();
 		this.id = id;
@@ -15,32 +15,9 @@ public class Movie {
 		this.year = year;
 	}
 
-	private int getId() {
-		return id;
-	}
-
-	private String getName() {
-		return name;
-	}
-
-	private double getRating() {
-		return rating;
-	}
-
-	private int getYear() {
-		return year;
-	}
-
 	@Override
 	public String toString() {
 		return "Movie [id=" + id + ", name=" + name + ", rating=" + rating + ", year=" + year + "]";
 	}
-	
-	
-	
-	
-	
-	
-	
-	
+
 }
