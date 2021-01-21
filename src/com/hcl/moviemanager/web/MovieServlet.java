@@ -26,12 +26,10 @@ public class MovieServlet extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		PrintWriter out = resp.getWriter();
 		showUser(req, resp);
 	}
 
 	private void showUser(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		resp.setContentType("text/html");
 		PrintWriter out = resp.getWriter();
 		int id = Integer.parseInt(req.getParameter("id"));
 		Movie movie = movieDAO.selectMovie(id);
